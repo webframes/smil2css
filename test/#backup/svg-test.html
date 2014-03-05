@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cross-Browser Frame-by-Frame SVG</title>
+</head>
+<body>
+
+<p>In addition to the standard list of browsers, this also works in <abbr>IE</abbr>10+ and does so without JavaScript.</p>
+<p>It works by using <abbr>CSS</abbr> <code>animation</code> within the <abbr>SVG</abbr> instead of <abbr>SMIL</abbr>.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+	<defs>
+		<style type="text/css"><![CDATA[
+			path,rect
+			{
+				fill: #edd154;
+				stroke: #3c352d;
+				stroke-width: 2;
+			}
+			
+			@keyframes circle
+			{
+				0%    { visibility:hidden }
+				32.9% { visibility:hidden }		/* avoids transition */
+				33%   { visibility:visible }
+				65.9% { visibility:visible }	/* avoids transition */
+				66%   { visibility:hidden }
+				100%  { visibility:hidden }
+			}
+			@-webkit-keyframes circle
+			{
+				0%    { visibility:hidden }
+				32.9% { visibility:hidden }		/* avoids transition */
+				33%   { visibility:visible }
+				65.9% { visibility:visible }	/* avoids transition */
+				66%   { visibility:hidden }
+				100%  { visibility:hidden }
+			}
+			
+			@keyframes square
+			{
+				0%    { visibility:visible }
+				32.9% { visibility:visible }	/* avoids transition */
+				33%   { visibility:hidden }
+				66%   { visibility:hidden }
+				100%  { visibility:hidden }
+			}
+			@-webkit-keyframes square
+			{
+				0%    { visibility:visible }
+				32.9% { visibility:visible }	/* avoids transition */
+				33%   { visibility:hidden }
+				66%   { visibility:hidden }
+				100%  { visibility:hidden }
+			}
+			
+			@keyframes triangle
+			{
+				0%    { visibility:hidden }
+				33%   { visibility:hidden }
+				65.9% { visibility:hidden }
+				66%   { visibility:visible }	/* avoids transition */
+				99.9% { visibility:visible }	/* avoids transition */
+				100%  { visibility:hidden }
+			}
+			@-webkit-keyframes triangle
+			{
+				0%    { visibility:hidden }
+				33%   { visibility:hidden }
+				65.9% { visibility:hidden }
+				66%   { visibility:visible }	/* avoids transition */
+				99.9% { visibility:visible }	/* avoids transition */
+				100%  { visibility:hidden }
+			}
+		]]></style>
+	</defs>
+	<g>
+		<rect
+		id="square"
+		style="animation:square 1s infinite; -webkit-animation:square 1s infinite"
+		width="100"
+		height="100"
+		x="30"
+		y="30">
+			<!--<animate
+			id="frame1"
+			attributeName="display"
+			values="inline;none;none;none"
+			keyTimes="0;0.33;0.66;1"
+			dur="1s"
+			begin="0s"
+			repeatCount="indefinite" />-->
+		</rect>
+		
+		<path
+		id="circle"
+		style="animation:circle 1s infinite; -webkit-animation:circle 1s infinite"
+		d="m 125,80 a 45,45 0 1 1 -90,0 45,45 0 1 1 90,0 z">
+			<!--<animate
+			id="frame2"
+			attributeName="display"
+			values="none;inline;none;none"
+			keyTimes="0;0.33;0.66;1"
+			dur="1s"
+			begin="0s"
+			repeatCount="indefinite" />-->
+		</path>
+		
+		<path
+		id="triangle"
+		style="animation:triangle 1s infinite; -webkit-animation:triangle 1s infinite"
+		d="M 105,105 47,89 89,46 105,105 z">
+			<!--<animate
+			id="frame3"
+			attributeName="display"
+			values="none;none;inline;none"
+			keyTimes="0;0.33;0.66;1"
+			dur="1s"
+			begin="0s"
+			repeatCount="indefinite" />-->
+		</path>
+	</g>
+</svg>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+	<defs>
+		<style type="text/css"><![CDATA[
+			path,rect
+			{
+				fill: #edd154;
+				stroke: #3c352d;
+				stroke-width: 2;
+			}
+			
+			@keyframes circle
+			{
+				0%    { visibility:hidden }
+				32.9% { visibility:hidden }
+				33%   { visibility:visible }
+				65.9% { visibility:visible }
+				66%   { visibility:hidden }
+				100%  { visibility:hidden }
+			}
+			@-webkit-keyframes circle
+			{
+				0%    { visibility:hidden }
+				32.9% { visibility:hidden }
+				33%   { visibility:visible }
+				65.9% { visibility:visible }
+				66%   { visibility:hidden }
+				100%  { visibility:hidden }
+			}
+			
+			@keyframes square
+			{
+				0%    { visibility:visible }
+				32.9% { visibility:visible }
+				33%   { visibility:hidden }
+				66%   { visibility:hidden }
+				100%  { visibility:hidden }
+			}
+			@-webkit-keyframes square
+			{
+				0%    { visibility:visible }
+				32.9% { visibility:visible }
+				33%   { visibility:hidden }
+				66%   { visibility:hidden }
+				100%  { visibility:hidden }
+			}
+			
+			@keyframes triangle
+			{
+				0%    { visibility:hidden }
+				33%   { visibility:hidden }
+				65.9% { visibility:hidden }
+				66%   { visibility:visible }
+				99.9% { visibility:visible }
+				100%  { visibility:hidden }
+			}
+			@-webkit-keyframes triangle
+			{
+				0%    { visibility:hidden }
+				33%   { visibility:hidden }
+				65.9% { visibility:hidden }
+				66%   { visibility:visible }
+				99.9% { visibility:visible }
+				100%  { visibility:hidden }
+			}
+		]]></style>
+	</defs>
+	<g>
+		<rect
+		id="square"
+		style="animation:square 1s infinite; -webkit-animation:square 1s infinite"
+		width="100"
+		height="100"
+		x="30"
+		y="30">
+		</rect>
+		
+		<path
+		id="circle"
+		style="animation:circle 1s infinite; -webkit-animation:circle 1s infinite"
+		d="m 125,80 a 45,45 0 1 1 -90,0 45,45 0 1 1 90,0 z">
+		</path>
+		
+		<path
+		id="triangle"
+		style="animation:triangle 1s infinite; -webkit-animation:triangle 1s infinite"
+		d="M 105,105 47,89 89,46 105,105 z">
+		</path>
+	</g>
+</svg>
