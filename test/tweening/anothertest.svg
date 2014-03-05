@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+	<style type="text/css"><![CDATA[
+		path,rect { fill:gold; stroke:black; stroke-width:2 }
+	]]></style>
+	<g transform="rotate(45 80 80)">
+		<animateTransform attributeName="transform" type="rotate" from="0 80 80" to="90 80 80" dur="2s" begin="1s" />
+		<rect width="50" height="50" x="30" y="30" />
+		<rect width="50" height="50" x="80" y="80" />
+	</g>
+	<g transform="rotate(45 160 160)">
+		<animateTransform attributeName="transform" type="rotate" from="0 160 160" to="90 160 160" dur="2s" begin="1s" fill="freeze" />
+		<rect width="50" height="50" x="110" y="110" />
+		<rect width="50" height="50" x="160" y="160" />
+	</g>
+	<g transform="rotate(45 240 240)">
+		<animateTransform attributeName="transform" type="rotate" from="0 240 240" to="90 240 240" dur="2s" begin="1s" fill="freeze" repeatCount="indefinite" />
+		<rect width="50" height="50" x="190" y="190" />
+		<rect width="50" height="50" x="240" y="240" />
+	</g>
+	<g transform="rotate(45 320 320)">
+		<animateTransform attributeName="transform" type="rotate" from="0 320 320" to="90 320 320" dur="2s" begin="1s" repeatCount="indefinite" />
+		<rect width="50" height="50" x="270" y="270" />
+		<rect width="50" height="50" x="320" y="320" />
+	</g>
+	<g opacity="0.5">
+		<rect width="50" height="50" x="350" y="350" />
+		<rect width="50" height="50" x="400" y="400" />
+	</g>
+</svg>

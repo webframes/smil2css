@@ -1,23 +1,27 @@
-# smil2css [![NPM Version](http://badge.fury.io/js/smil2css.png)](http://badge.fury.io/js/smil2css) [![Build Status](https://secure.travis-ci.org/stevenvachon/smil2css.png)](http://travis-ci.org/stevenvachon/smil2css) [![Dependency Status](https://david-dm.org/stevenvachon/smil2css.png)](https://david-dm.org/stevenvachon/smil2css)
+# smil2css [![NPM Version](http://badge.fury.io/js/smil2css.svg)](http://badge.fury.io/js/smil2css) [![Build Status](https://secure.travis-ci.org/stevenvachon/smil2css.svg)](http://travis-ci.org/stevenvachon/smil2css) [![Dependency Status](https://david-dm.org/stevenvachon/smil2css.svg)](https://david-dm.org/stevenvachon/smil2css)
 
 > SVG animation supporting IE10+ and \<noscript>.
 
 Unfortunately, Internet Explorer does not support SVG animation (SMIL). Other solutions like [FakeSmile](http://leunen.me/fakesmile/) use JavaScript to recreate the animation. Not only does this close doors to users with JavaScript disabled, it requires an extra download and performs slower than CSS animations. This utility converts SMIL to CSS and works in any Internet Explorer version that supports CSS' `animation` (IE10+).
 
-*Note:* Currently, only frame-by-frame animations are converted. [read more](#roadmap-features)
+*Note:* Currently, only frame-by-frame animations are converted. [read more](https://github.com/stevenvachon/smil2css/wiki/Roadmap-Features)
+
+*Note:* CSS is not compatible with some SMIL features. [read more](https://github.com/stevenvachon/smil2css/wiki/Limitations)
+
+Check out the [examples](http://stevenvachon.github.io/smil2css/).
 
 ## Getting Started
 
-This plugin requires [NodeJS](http://nodejs.org/) `~0.10`. There're two ways to use it:
+This utility requires [Node.js](http://nodejs.org/) `~0.10`. There're two ways to use it:
 
 ### Command-Line Usage  
 To install, type this at the command line:
 ```
 npm install smil2css -g
 ```
-After that, check out the help for available options:
+After that, check out `smil2css -?` for available options. Typical usage might look like:
 ```
-smil2css -?
+smil2css input.svg output.svg -c
 ```
 
 ### Programmatic API
@@ -27,15 +31,24 @@ npm install smil2css --save-dev
 ```
 After that, it can be used as a [function for single-use](#single-instance) or as a [class for multiple conversions](#reusable-instances).
 
-Upon successful conversion, a `String` will be returned. If an issue is encountered, `false` will be returned.
+Upon successful conversion, a `String` will be returned. If a known issue is encountered, an `Error` will be returned (not thrown).
 
 #### Single Instance
 ```javascript
-var result = smil2css.convert(svgString, options);
+var result = require("smil2css").convert(svgString, options);
 
-if (result)
+if (result instanceof Error)
 {
-	console.log("success");
+	console.log(result.message);
+	
+	// Additional information
+	console.log(result.smil2css.element);
+	console.log(result.smil2css.type);
+	console.log(result.smil2css.wiki);
+}
+else
+{
+	console.log("success!");
 }
 ```
 
@@ -48,19 +61,20 @@ var instance = new smil2css(options);
 var result1 = instance.convert(svgString1);
 var result2 = instance.convert(svgString2, customOptions);
 var result3 = instance.convert(svgString3);
+
+// Checking for errors is the same as in the above example
 ```
 
-## Roadmap Features
-
-* More animation attributes than just `display`,`visibility`
-* Convert `from` and `to` to `keyTimes`
-* Nested `<svg>` elements
-* and some possibly impossible features:
-  * ~~`<animatecolor>`~~,`<animatemotion>`,`<animatetransform>`,`<mpath>`,`<set>` elements
-  * Unmatching `begin` attribute values among sibling animation elements
-  * Unmatching `repeatCount` attribute values among sibling animation elements
+## Status
+Full feature list: [here](https://github.com/stevenvachon/smil2css/wiki/Current-Status)
 
 ## Release History
+* 0.2.0
+  * support `begin` syncbase time values
+  * convert `from`,`to` to `values`
+  * better error reporting
+  * support files previously processed with smil2css
+  * removed task runner
 * 0.1.0 initial release
 
 ---

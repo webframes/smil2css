@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+	<style type="text/css"><![CDATA[
+		circle,path,rect { fill:gold; stroke:black; stroke-width:2 }
+		g { visibility:hidden }
+	]]></style>
+	
+	<!-- plays frames: 0, 1, 0+2, 0+1, 0+1+2 ... 0+1+2 ... 0+1+2, etc -->
+	
+	<g>
+		<animate id="frame0" attributeName="visibility" values="visible" dur="1s" begin="0s;frame1.end;frame2.end" /><!-- begin:0s;LOOP? -->
+		<rect width="100" height="100" x="30" y="30" />
+	</g>
+	<g>
+		<animate id="frame1" attributeName="visibility" values="visible" dur="1s" begin="frame0.end" /><!-- begin:1s;LOOP? -->
+		<circle r="45" cx="80" cy="80" />
+	</g>
+	<g>
+		<animate id="frame2" attributeName="visibility" values="visible" dur="1s" begin="frame1.end" /><!-- begin:2s; -->
+		<path d="M 105,105 47,89 89,46 105,105 z" />
+	</g>
+</svg>

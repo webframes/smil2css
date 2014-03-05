@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+	<style type="text/css"><![CDATA[
+		circle,path,rect { fill:gold; stroke:black; stroke-width:2 }
+		g { visibility:hidden }
+	]]></style>
+	
+	<rect width="100" height="100">
+	    <animate attributeName="x" from="0" to="100" dur="1s" repeatDur="3s" />
+	</rect>
+</svg>

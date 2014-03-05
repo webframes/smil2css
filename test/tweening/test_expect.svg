@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+	<style type="text/css"><![CDATA[
+		g { visibility:hidden }
+		path,rect { fill:gold; stroke:black; stroke-width:2 }
+	]]></style>
+	<g>
+		<animate id="frame0" attributeName="visibility" values="visible" dur="1s" begin="0s;frame2.end" />
+		<animateTransform id="frame1" attributeName="transform" type="rotate" from="0 80 80" to="90 80 80" dur="1s" begin="0s;frame2.end" />
+		<rect width="50" height="50" x="30" y="30" />
+		<rect width="50" height="50" x="80" y="80" />
+	</g>
+	<g>
+		<animate id="frame2" attributeName="visibility" values="visible" dur="1s" begin="frame0.end" />
+		<path d="m 125,80 a 45,45 0 1 1 -90,0 45,45 0 1 1 90,0 z" />
+	</g>
+</svg>

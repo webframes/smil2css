@@ -1,39 +1,39 @@
 {
   "name": "smil2css",
   "description": "SVG animation supporting IE10+ and <noscript>.",
-  "version": "0.1.0",
-  "homepage": "https://github.com/stevenvachon/node-smil2css",
+  "version": "0.2.0",
+  "homepage": "https://github.com/stevenvachon/smil2css",
   "author": {
     "name": "Steven Vachon",
     "email": "contact@svachon.com",
     "url": "http://www.svachon.com/"
   },
   "main": "lib",
-  "bin": {
-    "smil2css": "bin/index"
-  },
+  "bin": "bin/smil2css",
   "repository": {
     "type": "git",
-    "url": "git://github.com/stevenvachon/node-smil2css.git"
+    "url": "git://github.com/stevenvachon/smil2css.git"
   },
   "bugs": {
-    "url": "https://github.com/stevenvachon/node-smil2css/issues"
+    "url": "https://github.com/stevenvachon/smil2css/issues"
   },
   "dependencies": {
-    "autoprefixer": "~1.1",
-    "cheerio": "~0.13",
-    "cli-table": "~0.3",
-    "colors": "~0.6",
+    "autoprefixer": "~1.2",
+    "cheerio": "~0.17",
     "css": "~1.6",
-    "nopt": "~2.2"
+    "decimal.js": "~3.0",
+    "nopter": "~0.1",
+    "object.assign": "~0.3"
   },
   "devDependencies": {
     "chai": "~1.9",
-    "grunt": "~0.4",
-    "grunt-mocha-test": "~0.9"
+    "mocha": "~1.18"
   },
   "engines": {
     "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha test/ --bail --reporter spec --check-leaks"
   },
   "keywords": [
     "svg",
