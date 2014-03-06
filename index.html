@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>smil2css Example(s) :: SVG animation supporting IE10+ and &lt;noscript&gt;</title>
+<meta name="description" content="SVG animation supporting IE10+ and <noscript>"/>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<style type="text/css">
+	body {
+		font-family: sans-serif;
+		font-size: .8em;
+		margin: 20px auto;
+		max-width: 800px;
+	}
+	figcaption { text-align:center }
+	figure { margin:0 }
+	figure::after { content:""; clear:both; display:block }
+	figure.bg > figure { float:left; width:50% }
+	figure.img:not(:first-child) { margin-top:1em }
+	figure.img > figure { display:inline-block }
+	figure.img > figure:not(:first-child) { margin-left:1em }
+	footer {
+		font-size: .6em;
+		margin-top: 2rem;
+		opacity: .6;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<h1>smil2css Example(s)</h1>
+		<p>This is a demo page for <a href="https://github.com/stevenvachon/smil2css/">smil2css</a>.</p>
+		<p>JavaScript is not used <em>anywhere</em> at all.</p>
+	</header>
+	
+	<hr/>
+	
+	<main>
+		<article>
+			<h1>Frame-by-Frame Animations</h1>
+			
+			<section>
+				<h1>In <code>&lt;img&gt;</code></h1>
+				<figure class="img">
+					<figure>
+						<img src="svg/2d-shapes-org.svg" width="160" height="160" alt="2D Shapes (original)"/>
+						<figcaption>original (1.1<abbr>kb</abbr>); no <abbr>IE</abbr> support</figcaption>
+					</figure>
+					<figure>
+						<img src="svg/2d-shapes-new.svg" width="160" height="160" alt="2D Shapes (converted)"/>
+						<figcaption>converted (1.7<abbr>kb</abbr>); supports <abbr>IE</abbr>10+</figcaption>
+					</figure>
+				</figure>
+
+				<figure class="img">
+					<figure>
+						<img src="svg/3d-star-org.svg" width="200" height="150" alt="3D Star (original)"/>
+						<figcaption>original (93<abbr>kb</abbr>); no <abbr>IE</abbr> support</figcaption>
+					</figure>
+					<figure>
+						<img src="svg/3d-star-new.svg" width="200" height="150" alt="3D Star (converted)"/>
+						<figcaption>coming in v0.2<!--converted (?<abbr>kb</abbr>); supports <abbr>IE</abbr>10+--></figcaption>
+					</figure>
+				</figure>
+			</section>
+			
+			<section>
+				<h1>In <code>background-image</code> (same files)</h1>
+				<figure class="bg">
+					<figure>
+						<div style="width:100%; height:155px; background:url(svg/2d-shapes-new.svg); background-size:10%"></div>
+						<figcaption>original; no <abbr>IE</abbr> support</figcaption>
+					</figure>
+					<figure>
+						<div style="width:100%; height:155px; background:url(svg/2d-shapes-new.svg); background-size:10%"></div>
+						<figcaption>converted; supports <abbr>IE</abbr>10+</figcaption>
+					</figure>
+				</figure>
+				<!--<figure class="bg">
+					<figure>
+						<div style="width:100%; height:150px; background:url(svg/3d-star-new.svg); background-size:10%"></div>
+						<figcaption>original; no <abbr>IE</abbr> support</figcaption>
+					</figure>
+					<figure>
+						<div style="width:100%; height:150px; background:url(svg/3d-star-new.svg); background-size:10%"></div>
+						<figcaption>converted; supports <abbr>IE</abbr>10+</figcaption>
+					</figure>
+				</figure>-->
+			</section>
+		</article>
+		
+		<hr/>
+		
+		<aside>
+			<h1>Notes</h1>
+			<p>
+				<strong>Firefox v28+ is required.</strong> At v25, Firefox began to stall <abbr>CSS</abbr>
+				animations within <abbr>SVG</abbr> documents <em>unless</em> the window was actively being resized.
+			</p>
+			<p>
+				This <strong>currently does not work in Chrome.</strong> Around v29, Chrome began to display
+				only the first frame of <abbr>CSS</abbr> animations within <abbr>SVG</abbr> documents.
+				<a href="https://code.google.com/p/chromium/issues/detail?id=278189">More info</a>.
+			</p>
+		</aside>
+	</main>
+	
+	<footer>
+		Created in <time datetime="2014-03">March 2014</time> by <a href="http://www.svachon.com/">Steven Vachon</a>.
+	</footer>
+</body>
+</html>
