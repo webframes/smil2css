@@ -1,14 +1,14 @@
-# smil2css [![NPM Version](http://badge.fury.io/js/smil2css.svg)](http://badge.fury.io/js/smil2css) [![Build Status](https://secure.travis-ci.org/stevenvachon/smil2css.svg)](http://travis-ci.org/stevenvachon/smil2css) [![Dependency Status](https://david-dm.org/stevenvachon/smil2css.svg)](https://david-dm.org/stevenvachon/smil2css)
+# smil2css [![NPM Version](http://badge.fury.io/js/smil2css.svg)](http://badge.fury.io/js/smil2css) [![Build Status](https://secure.travis-ci.org/webframes/smil2css.svg)](http://travis-ci.org/webframes/smil2css) [![Dependency Status](https://david-dm.org/webframes/smil2css.svg)](https://david-dm.org/webframes/smil2css)
 
 > SVG animation supporting IE10+ and \<noscript>.
 
 Unfortunately, Internet Explorer does not support SVG animation (SMIL). Other solutions like [FakeSmile](http://leunen.me/fakesmile/) use JavaScript to recreate the animation. Not only does this close doors to users with JavaScript disabled, it requires an extra download and performs slower than CSS animations. This utility converts SMIL to CSS and works in any Internet Explorer version that supports CSS' `animation` (IE10+).
 
-*Note:* Currently, only frame-by-frame animations are converted. [read more](https://github.com/stevenvachon/smil2css/wiki/Roadmap-Features)
+*Note:* Currently, only frame-by-frame animations are converted. [read more](https://github.com/webframes/smil2css/wiki/Roadmap-Features)
 
-*Note:* CSS is not compatible with some SMIL features. [read more](https://github.com/stevenvachon/smil2css/wiki/Limitations)
+*Note:* CSS is not compatible with some SMIL features. [read more](https://github.com/webframes/smil2css/wiki/Limitations)
 
-Check out the [examples](http://stevenvachon.github.io/smil2css/).
+Check out the [examples](http://webframes.github.io/smil2css/).
 
 ## Getting Started
 
@@ -66,7 +66,7 @@ var result3 = instance.convert(svgString3);
 ```
 
 ## Status
-Full feature list: [here](https://github.com/stevenvachon/smil2css/wiki/Current-Status)
+Full feature list: [here](https://github.com/webframes/smil2css/wiki/Current-Status)
 
 ## Release History
 * 0.2.0
@@ -79,4 +79,4 @@ Full feature list: [here](https://github.com/stevenvachon/smil2css/wiki/Current-
 
 ---
 
-[![Analytics](https://ga-beacon.appspot.com/UA-3614308-10/stevenvachon/smil2css)](https://github.com/igrigorik/ga-beacon "Google Analytics") [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/stevenvachon/smil2css/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Analytics](https://ga-beacon.appspot.com/UA-3614308-10/webframes/smil2css)](https://github.com/igrigorik/ga-beacon "Google Analytics")

@@ -18,23 +18,27 @@
     "url": "https://github.com/stevenvachon/smil2css/issues"
   },
   "dependencies": {
-    "autoprefixer": "~1.2",
+    "autoprefixer": "^2.2",
     "cheerio": "~0.17",
-    "css": "~1.6",
-    "decimal.js": "~3.0",
+    "css": "^2.1",
+    "decimal.js": "^3.0",
     "nopter": "~0.1",
-    "object.assign": "~0.3"
+    "object.assign": "^1.0"
   },
   "devDependencies": {
-    "chai": "~1.9",
-    "mocha": "~1.18"
+    "chai": "^1.9",
+    "mocha": "^1.21"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.10"
   },
   "scripts": {
-    "test": "node node_modules/mocha/bin/mocha test/ --bail --reporter spec --check-leaks"
+    "test": "mocha test/ --bail --reporter spec --check-leaks"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "keywords": [
     "svg",
     "smil"
