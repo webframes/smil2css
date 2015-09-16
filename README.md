@@ -1,4 +1,4 @@
-# smil2css [![NPM Version](http://badge.fury.io/js/smil2css.svg)](http://badge.fury.io/js/smil2css) [![Build Status](https://secure.travis-ci.org/webframes/smil2css.svg)](http://travis-ci.org/webframes/smil2css) [![Dependency Status](https://david-dm.org/webframes/smil2css.svg)](https://david-dm.org/webframes/smil2css)
+# smil2css [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][david-image]][david-url]
 
 > SVG animation supporting IE10+ and \<noscript>.
 
@@ -12,7 +12,7 @@ Check out the [examples](http://webframes.github.io/smil2css/).
 
 ## Getting Started
 
-This utility requires [Node.js](http://nodejs.org/) `~0.10`. There're two ways to use it:
+This utility requires [Node.js](http://nodejs.org/) `>= 0.10`. There're two ways to use it:
 
 ### Command-Line Usage  
 To install, type this at the command line:
@@ -65,8 +65,10 @@ var result3 = instance.convert(svgString3);
 // Checking for errors is the same as in the above example
 ```
 
+
 ## Status
 Full feature list: [here](https://github.com/webframes/smil2css/wiki/Current-Status)
+
 
 ## Release History
 * 0.2.0
@@ -77,6 +79,10 @@ Full feature list: [here](https://github.com/webframes/smil2css/wiki/Current-Sta
   * removed task runner
 * 0.1.0 initial release
 
----
 
-[![Analytics](https://ga-beacon.appspot.com/UA-3614308-10/webframes/smil2css)](https://github.com/igrigorik/ga-beacon "Google Analytics")
+[npm-image]: https://img.shields.io/npm/v/smil2css.svg
+[npm-url]: https://npmjs.org/package/smil2css
+[travis-image]: https://img.shields.io/travis/webframes/smil2css.svg
+[travis-url]: https://travis-ci.org/webframes/smil2css
+[david-image]: https://img.shields.io/david/webframes/smil2css.svg
+[david-url]: https://david-dm.org/webframes/smil2css

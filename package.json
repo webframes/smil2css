@@ -2,6 +2,7 @@
   "name": "smil2css",
   "description": "SVG animation supporting IE10+ and <noscript>.",
   "version": "0.2.0",
+  "license": "MIT",
   "homepage": "https://github.com/stevenvachon/smil2css",
   "author": {
     "name": "Steven Vachon",
@@ -26,8 +27,8 @@
     "object.assign": "^1.0"
   },
   "devDependencies": {
-    "chai": "^1.9",
-    "mocha": "^1.21"
+    "chai": "^3.2.0",
+    "mocha": "^2.3.2"
   },
   "engines": {
     "node": ">= 0.10"
@@ -37,7 +38,8 @@
   },
   "files": [
     "bin",
-    "lib"
+    "lib",
+    "license"
   ],
   "keywords": [
     "svg",
